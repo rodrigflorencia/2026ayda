@@ -1,21 +1,7 @@
 /**Determinar valores maximos y minimos de un arreglo de numeros reales. Complejidad: O(log n)*/
 #include <iostream>
-#include<stdlib.h>
-#define MAX 20
 using namespace std;
 
-int print(int v[])
-{
-    cout<<endl;
-    for (int k=0;k<MAX;k++)
-        cout<<v[k]<<" + ";
-    cout<<endl;
-}
-int inic(int v[])
-{
-    for (int k=0;k<MAX;k++)
-        v[k]=rand()%MAX;
-}
 void maxMin(int v[],int ini,int fin,int & min, int & max)
 {
     if (fin-2>ini)
@@ -65,10 +51,10 @@ void maxMin(int v[],int ini,int fin,int & min, int & max)
 }
 int main()
 {
-    int arr[MAX];
+    int arr[20];
     int min=0;
     int max = 0;
-    maxMin(arr,0,MAX,min,max);
+    maxMin(arr,0,20,min,max);
     cout<<"\nEl maximo es: "<<max<<" y el minimo: "<<min<<endl;
     return 0;
 
