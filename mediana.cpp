@@ -1,4 +1,4 @@
-/**Determinar la mediana de dos vectores. Complejidad: O(log n)*/
+/**Determinar la mediana de dos vectores de n elementos c/u (u y v tienen la misma cantidad de elementos). Complejidad: O(log n)*/
 #include <iostream>
 #include<stdlib.h>
 #define MAX 8
