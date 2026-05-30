@@ -58,7 +58,7 @@ int main()
 {
     int v[MAX];
     int u [MAX];
-    inic (u,v);
+    inic (u,v); // implementar inicialización de array
     int med = mediana(u,0,MAX,v,0,MAX);
     cout<<endl<<"Mediana: "<<med<<"."<<endl;
     return 0;
