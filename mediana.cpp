@@ -16,16 +16,16 @@ int mediana (int v[],int minv,int maxv,int u[],int minu,int maxu)
         else
         {
             if (v[posv]<u[posu])
-                return mediana(v,maxv-med,maxv,u,minu,minu+med);
+                return mediana(v,maxv-med,maxv,u,minu,posu);
             else
-                return mediana(v,minv,minv+med,u,maxu-med,maxu);
+                return mediana(v,minv,posv,u,posu,maxu);
         }
     }
     else
     {
-        if (maxv-2==minv)
+        if (maxv-2==minv) // Dos elementos
         {
-            /*Dos elementos*/
+            // El siguiente bloque if - else (linea 29 a 43) se puede reemplazar por return max(min(v[minv], u[minu]), min(v[minv+1], u[minu+1])); 
             if (v[maxv-1]<u[minu])
                 return v[maxv-1];
             else
@@ -40,7 +40,7 @@ int mediana (int v[],int minv,int maxv,int u[],int minu,int maxu)
                         return u[minu];
                 }
             }
-
+//////////////////
         }
         else
         {
